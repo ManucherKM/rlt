@@ -1,0 +1,24 @@
+.wrapper-inventory {
+    min-width: 785px;
+
+    .interaction {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card-info {
+        min-width: 236px;
+    }
+
+    .inventory {
+        width: 527px;
+    }
+
+    .notification {
+        margin-top: 24px;
+    }
+}
+
+@import "./card-info.scss";
+@import "./inventory.scss";
+@import "./item.scss";
