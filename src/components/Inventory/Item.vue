@@ -1,36 +1,54 @@
 <template>
-    <div class="wrapper-item">
-        <div @drag="drag" @drop="drop" v-if="isRender">
-            <img class="img" :src="img" alt="img-item">
+    <div @dragstart="startDrag" @dragover="overDrag" @dragend="endDrag" @dragenter="enterDrag" @dragleave="leaveDrag"
+        :draggable="isDraggable" :class="styles">
+        <div v-if="!isEmptyItem">
+            <img class="img" :src="item.img" alt="img-item" />
             <div class="amount">
-                {{ props.amount }}
+                {{ item.amount }}
             </div>
         </div>
-        <div @drag="drag" @drop="drop" v-else class="empty-img"></div>
+        <div v-else class="empty-img"></div>
     </div>
 </template>
 
 <script setup>
 import { useInventoryStore } from '@/stores/inventory';
-const props = defineProps(["img", "amount", "id"]);
+import { ref } from 'vue';
+const { item } = defineProps(["item"]);
 
-const { img, id, amount } = props;
+const invetoryItems = useInventoryStore();
 
-let isRender = true;
+const isEmptyItem = ref(false);
+const isDraggable = ref(true);
 
-if (!img || !id || !amount) {
-    isRender = false;
+if (!item.img || !item.id || !item.amount) {
+    isEmptyItem.value = true;
+    isDraggable.value = false;
 }
 
-const items = useInventoryStore();
+const styles = ref("wrapper-item");
 
+function endDrag() {
+    styles.value = "wrapper-item";
+    invetoryItems.change()
+}
 
-// function drop(e) {
-//     console.log(e);
-// }
+function startDrag(e) {
+    styles.value = "wrapper-item opacity item-active";
+    invetoryItems.updatePrev(item);
+}
 
-function drag() {
-    console.log(items.change());
+function enterDrag() {
+    styles.value = "wrapper-item item-hover";
+    invetoryItems.updateNext(item);
+}
+
+function leaveDrag() {
+    styles.value = "wrapper-item";
+}
+
+function overDrag(e) {
+    e.stopPropagation();
 }
 
 </script>

@@ -1,40 +1,19 @@
 <template>
     <div class="panel-inventory">
         <Wrapper>
-            <div class="container-inventory">
-                <Item :amount="1" :img="img" :id="Date.now()" />
-                <Item :amount="1" :img="img" :id="Date.now()" />
-                <Item :amount="1" :img="img" :id="Date.now()" />
-                <Item :amount="1" :img="img" :id="Date.now()" />
-                <Item :amount="1" :img="img" :id="Date.now()" />
-                <Item :amount="1" :img="img" :id="Date.now()" />
-                <Item :amount="1" :img="img" :id="Date.now()" />
-                <Item :amount="1" :img="img" :id="Date.now()" />
-                <Item :amount="1" :img="img" :id="Date.now()" />
-                <Item :amount="1" :img="img" :id="Date.now()" />
-                <Item :amount="1" :img="img" :id="Date.now()" />
-                <Item :amount="1" :img="img" :id="Date.now()" />
-                <Item :amount="1" img="" :id="Date.now()" />
-                <Item :amount="1" img="" :id="Date.now()" />
-                <Item :amount="1" img="" :id="Date.now()" />
-                <Item :amount="1" img="" :id="Date.now()" />
-                <Item :amount="1" img="" :id="Date.now()" />
-                <Item :amount="1" img="" :id="Date.now()" />
-                <Item :amount="1" img="" :id="Date.now()" />
-                <Item :amount="1" img="" :id="Date.now()" />
-                <Item :amount="1" img="" :id="Date.now()" />
-                <Item :amount="1" img="" :id="Date.now()" />
-                <Item :amount="1" img="" :id="Date.now()" />
-                <Item :amount="1" img="" :id="Date.now()" />
-                <Item :amount="1" img="" :id="Date.now()" />
+            <div draggable="false" class="container-inventory">
+                <Item v-for="item in invetoryItems" :item="item" :key="item.id" />
             </div>
         </Wrapper>
     </div>
 </template>
 
 <script setup>
+import { computed } from 'vue';
+import { useInventoryStore } from '@/stores/inventory';
+
 import Wrapper from '../UI/Wrapper.vue';
 import Item from './Item.vue';
 
-import img from "@/assets/img/img-item.png";
+const invetoryItems = computed(() => useInventoryStore().invetoryItems);
 </script>

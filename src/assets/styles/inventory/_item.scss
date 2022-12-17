@@ -4,6 +4,10 @@
     border-bottom: 1px solid $white-gray;
     position: relative;
 
+    &:nth-child(1) {
+        border-radius: 0.5rem 0 0 0;
+    }
+
     &:nth-child(5) {
         border-radius: 0 0.5rem 0 0;
     }
@@ -22,6 +26,7 @@
         bottom: 0;
         color: #fff;
         padding: 2px 6px;
+        background: $white-black;
         border-top: 1px solid $white-gray;
         border-left: 1px solid $white-gray;
         border-radius: 6px 0 0 0;
@@ -38,4 +43,24 @@
         height: 54px;
         object-fit: cover;
     }
+
+    &.item-hover {
+        background: $white-gray;
+    }
+
+    &.opacity {
+        opacity: 0.3;
+    }
+
+    &.item-active {
+        background: $white-black;
+        padding: 23px 25px;
+        border-radius: 24px;
+    }
+
+    div,
+    img {
+        pointer-events: none;
+    }
+
 }
