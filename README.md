@@ -9,7 +9,9 @@
 
 ## Web application
 
-[Rlt](https://rlt-six.vercel.app). Test task from rlt.
+Test task from rlt.
+
+[Rlt](https://rlt-six.vercel.app)
 
 ## Preview
 
