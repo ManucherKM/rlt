@@ -1,35 +1,16 @@
-# rlt
+# Rlt
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tools
 
-## Recommended IDE Setup
+![Vue](https://img.shields.io/badge/-Vue-000?style=for-the-badge&logo=Vuedotjs&logoColor=41B782)
+![Pinia](https://img.shields.io/badge/-Pinia-000?style=for-the-badge&logo=pinia&logoColor=19BBBA)
+![SASS](https://img.shields.io/badge/-Axios-000?style=for-the-badge&logo=sass&logoColor=CE639A)
+![HTML](https://img.shields.io/badge/-HTML-000?style=for-the-badge&logo=html5&logoColor=EC652C)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Web application
 
-## Customize configuration
+[Rlt](https://rlt-six.vercel.app)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Preview
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+[![Layout](https://github.com/ManucherKM/rlt/blob/main/preview/home.png?raw=true)](https://rlt-six.vercel.app)
