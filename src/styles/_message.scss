@@ -1,0 +1,20 @@
+.wrapper-message {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .skeleton {
+        padding: 5px;
+        width: 95%;
+    }
+
+    .cross__btn {
+        cursor: pointer;
+        padding: 2px 5px;
+        border-radius: 0.2rem;
+
+        &:hover {
+            background: $white-gray;
+        }
+    }
+}

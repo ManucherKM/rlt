@@ -1,0 +1,13 @@
+.panel-inventory {
+    & .wrapper {
+        border-right: 0;
+        border-bottom: 0;
+    }
+
+    .container-inventory {
+        display: flex;
+        flex-wrap: wrap;
+        user-select: none;
+    }
+
+}

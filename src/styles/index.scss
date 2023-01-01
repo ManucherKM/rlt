@@ -1,0 +1,26 @@
+@import "./variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $dark;
+}
+
+.bg-red {
+    background: red;
+}
+
+@import "./fonts";
+@import "./inventory/index";
+@import "./message";
