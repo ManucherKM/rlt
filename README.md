@@ -1,4 +1,4 @@
-# Test task from rlt
+# Rlt
 
 ## Tools
 
@@ -9,7 +9,7 @@
 
 ## Web application
 
-[Rlt](https://rlt-six.vercel.app)
+[Rlt](https://rlt-six.vercel.app). Test task from rlt.
 
 ## Preview
 
